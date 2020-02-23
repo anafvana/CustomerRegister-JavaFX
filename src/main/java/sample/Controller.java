@@ -73,7 +73,6 @@ public class Controller implements Initializable {
 
 
     private AddToTV newPerson = new AddToTV();
-    private IntegerStringConverter intStrConverter = new IntegerStringConverter();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -170,8 +169,6 @@ public class Controller implements Initializable {
         personStringCellEditEvent.getRowValue().setEmail(personStringCellEditEvent.getNewValue());
     }
 
-
-
     @FXML
     private void btnOpenFile(ActionEvent event) {
         FileChooser fc = new FileChooser();
@@ -179,15 +176,17 @@ public class Controller implements Initializable {
         fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT files", "*.txt"));
         fc.setInitialDirectory(new File(currentDir));
 
-            try {
-                ObservableList<Person> personList = Reader.readPeople(currentDir);
-                tableView.setItems(personList);
-            } catch (IOException e) {
-                System.err.println("Could not read the requested file. Cause: " + e.getMessage());
-            } catch (InvalidPersonFormat e) {
-                System.err.println("The data is not formatted correctly. Cause: " + e.getMessage());
-            }
-    };
+        File selectedFile = fc.showOpenDialog(null);
+
+        try {
+            ObservableList<Person> personList = Reader.readPeople(selectedFile.getPath());
+            tableView.setItems(personList);
+        } catch (IOException e) {
+            System.err.println("Could not read the requested file. Cause: " + e.getMessage());
+        } catch (InvalidPersonFormat e) {
+            System.err.println("The data is not formatted correctly. Cause: " + e.getMessage());
+        }
+    }
 
     @FXML
     void btnSaveToExisting(ActionEvent event) {

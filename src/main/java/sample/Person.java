@@ -68,6 +68,4 @@ public class Person implements Serializable {
         this.phone.set(TextValidation.buildPhone(phone));
     }
 
-    public void setAgeThroughTV(Integer newValue) {
-    }
 }
