@@ -199,7 +199,7 @@ public class Controller implements Initializable {
 
         FileChooser fc = new FileChooser();
         String currentDir = Paths.get(".").toAbsolutePath().normalize().toString();
-        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT files", "*.txt"), new FileChooser.ExtensionFilter("JOBJ Files", "*.jobj"));
+        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT files", "*.txt"));
         fc.setInitialDirectory(new File(currentDir));
 
         File selectedFile = fc.showOpenDialog(null);
@@ -218,7 +218,7 @@ public class Controller implements Initializable {
 
         FileChooser fc = new FileChooser();
         String currentDir = Paths.get(".").toAbsolutePath().normalize().toString();
-        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT files", "*.txt"), new FileChooser.ExtensionFilter("JOBJ Files", "*.jobj"));
+        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT files", "*.txt"));
         fc.setInitialFileName("personer");
         fc.setInitialDirectory(new File(currentDir));
 
@@ -249,6 +249,11 @@ public class Controller implements Initializable {
         } catch (Exception e) {
             System.err.println("Could not read the requested file. Cause: " + e.getMessage());
         }
+    }
+
+    @FXML
+    private void btnSaveFileToExistingJobj(ActionEvent event){
+        Path path = Paths.
     }
 
     ObservableList<String> chkBoxList = FXCollections.observableArrayList();
