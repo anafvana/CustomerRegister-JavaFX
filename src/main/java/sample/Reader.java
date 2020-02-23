@@ -11,10 +11,11 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Importer {
+public class Reader {
 
-    static ObservableList<Person> readPeople(ArrayList<Person> personList, String path) throws IOException, InvalidPersonFormat{
-        ObservableList<Person> obsListPersons = FXCollections.observableArrayList(personList);
+    static ObservableList<Person> readPeople(String path) throws IOException, InvalidPersonFormat{
+        ObservableList<Person> obsListPersons = FXCollections.observableArrayList();
+
         try (BufferedReader reader = Files.newBufferedReader(Paths.get(path))) {
             String line;
 
