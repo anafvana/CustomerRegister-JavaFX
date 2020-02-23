@@ -39,14 +39,19 @@ public class ParsePerson {
         }
     }
 
-    public static boolean validPerson(String string){
-        boolean personIsValid = false;
+    public static String[] parseDate(String dateOfBirth) throws InvalidDate{
         try {
-            Person testPerson = parsePerson(string);
-            personIsValid = true;
-        } catch (InvalidPersonFormat e){
-            personIsValid = false;
+            String[] splitDateArray = dateOfBirth.split("/", 3);
+            if (splitDateArray.length == 3) {
+                String dayOfBirth = splitDateArray[0];
+                String monthOfBirth = splitDateArray[1];
+                String yearOfBirth = splitDateArray[2];
+                return splitDateArray;
+            } else {
+                throw new InvalidDate("Invalid date format.\nCheck for DD/MM/YYYY.");
+            }
+        } catch (InvalidDate e){
+            throw new InvalidDate("Invalid date format.\nCheck for DD/MM/YYYY.");
         }
-        return personIsValid;
     }
 }

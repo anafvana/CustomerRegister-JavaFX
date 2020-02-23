@@ -150,7 +150,14 @@ public class Controller implements Initializable {
 
     @FXML
     private void txtDobEdited(TableColumn.CellEditEvent<Person, String> personStringCellEditEvent){
-        personStringCellEditEvent.getRowValue().setDateOfBirth(personStringCellEditEvent.getNewValue(), personStringCellEditEvent.getNewValue(), personStringCellEditEvent.getNewValue());
+        try {
+            String[] newDate = ParsePerson.parseDate(personStringCellEditEvent.getNewValue());
+            personStringCellEditEvent.getRowValue().setAge(newDate[0], newDate[1], newDate[2]);
+            personStringCellEditEvent.getRowValue().setDateOfBirth(newDate[0], newDate[1], newDate[2]);
+        } catch (InvalidDate e){
+            System.err.println(e.getMessage());
+        }
+
     }
 
     @FXML
@@ -162,19 +169,6 @@ public class Controller implements Initializable {
     private void txtEmailEdited(TableColumn.CellEditEvent<Person, String> personStringCellEditEvent){
         personStringCellEditEvent.getRowValue().setEmail(personStringCellEditEvent.getNewValue());
     }
-
-    /*@FXML
-    private void intDataEdited(TableColumn.CellEditEvent<Person, Integer> integerCellEditEvent){
-        if(intStrConverter.wasSuccessful()) {
-            try {
-                integerCellEditEvent.getRowValue().setAgeThroughTV(integerCellEditEvent.getNewValue());
-            } catch (NumberFormatException e) {
-                throw new NumberFormatException("You have to enter a number");
-            }
-        }
-    }
-
-     */
 
 
 
@@ -193,21 +187,7 @@ public class Controller implements Initializable {
             } catch (InvalidPersonFormat e) {
                 System.err.println("The data is not formatted correctly. Cause: " + e.getMessage());
             }
-    }
-
-        /*File selectedFile = fc.showOpenDialog(null);
-        ObservableList<Person> newList = FXCollections.observableArrayList();
-        /*try {
-            newList = Importer.readPerson(personList, selectedFile.getPath());
-            tableView.setItems(newList);
-        } catch (IOException e){
-            ErrorDialogs.showErrorDialog(e.getMessage());
-        } catch (InvalidPersonFormat e){
-            ErrorDialogs.showErrorDialog(e.getMessage());
-        }
-
-
-    }*/
+    };
 
     @FXML
     void btnSaveToExisting(ActionEvent event) {

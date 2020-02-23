@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9a9c85a-eaea-453d-a10d-46cf4c5b27eb" name="Default Changelist" comment="">
+    <list default="true" id="b9a9c85a-eaea-453d-a10d-46cf4c5b27eb" name="Default Changelist" comment="Removed parameter Person">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaFX11-example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaFX11-example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oblig 1 - Programutvikling.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig 1 - Programutvikling.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/personer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/personer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/NumberValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/NumberValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/ParsePerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/ParsePerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/FormatPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/FormatPerson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/ParsePerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ParsePerson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Person.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +33,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="workOffline" value="true" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -53,6 +65,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -74,7 +87,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
       <module name="Oblig 1 - Programutvikling" />
@@ -159,6 +172,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ParsePersonTest.validPerson" />
         <item itemvalue="JUnit.PersonTest.testValidName" />
@@ -190,7 +204,7 @@
       <workItem from="1582390666545" duration="7020000" />
       <workItem from="1582457199621" duration="2437000" />
       <workItem from="1582461320835" duration="546000" />
-      <workItem from="1582462084032" duration="5489000" />
+      <workItem from="1582462084032" duration="7804000" />
     </task>
     <task id="LOCAL-00001" summary="Turned into Observable list;&#10;Added the override methods for reader (might delete)">
       <created>1582462876110</created>
@@ -227,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582465886694</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Removed parameter Person">
+      <created>1582467603067</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582467603067</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +271,8 @@
     <MESSAGE value="Added age + testing methods to ParsePerson" />
     <MESSAGE value="There was an attempt (at making the reader work)&#10;Changed Importer class to Reader class&#10;Added creation of ObservableList in Reader&#10;Added some code to Controller to try to make the document opening to work" />
     <MESSAGE value="Changed setAge()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed setAge()" />
+    <MESSAGE value="Removed parameter Person" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed parameter Person" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="8" key="#JavaFX11-example_[exec:java]" timestamp="1580398480222">
