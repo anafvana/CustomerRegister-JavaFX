@@ -35,5 +35,11 @@ public class Main extends Application {
             }
         };
 
+        try {
+
+        } catch (InvalidPersonFormat e){
+
+        }
+
     }
 }
