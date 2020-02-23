@@ -28,15 +28,12 @@ public class ParsePerson {
                     } else {
                         throw new InvalidPersonFormat("Invalid date format.\nCheck for 'DD/MM/YYYY.");
                     }
-                    return personX;
                 } else {
                     throw new InvalidPersonFormat("Invalid person format.\nCheck for 'name;date_of_birth;email;phone' format.");
                 }
-                return personX;
             }
         } catch (InvalidPersonFormat e) {
             throw new InvalidPersonFormat("Invalid person format. Could not read or split string.");
-            personX = null;
         }
         return personX;
     }
