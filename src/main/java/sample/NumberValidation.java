@@ -168,6 +168,7 @@ class NumberValidation {
             } else {
                 age = todayYYYY - year;
             }
+            Person.setAge(DD, MM, YYYY);
 
         } catch (InvalidDate e) {
             String error = "Invalid date.";

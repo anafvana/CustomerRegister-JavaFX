@@ -40,7 +40,7 @@ public class Person implements Serializable {
         return age.get();
     }
 
-    public void setAge(String dayOfBirth, String monthOfBirth, String yearOfBirth){
+    public static void setAge(String dayOfBirth, String monthOfBirth, String yearOfBirth){
         age.set(NumberValidation.calcAge(dayOfBirth, monthOfBirth, yearOfBirth));
     }
 
@@ -68,6 +68,6 @@ public class Person implements Serializable {
         this.phone.set(TextValidation.buildPhone(phone));
     }
 
-    public void setAge(Integer newValue) {
+    public void setAgeThroughTV(Integer newValue) {
     }
 }
