@@ -67,13 +67,18 @@
       </TableView>
       <MenuBar layoutX="3.0" layoutY="1.0" prefHeight="26.0" prefWidth="724.0">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Save">
             <items>
                   <MenuItem mnemonicParsing="false" onAction="#btnSaveToNew" text="Save to new file" />
               <MenuItem mnemonicParsing="false" onAction="#btnSaveToExisting" text="Save to existing file" />
-                  <MenuItem mnemonicParsing="false" onAction="#btnOpenFile" text="Open file" />
             </items>
           </Menu>
+            <Menu mnemonicParsing="false" text="Open">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#btnOpenFile" text="Open txt file" />
+                  <MenuItem mnemonicParsing="false" onAction="#btnOpenFileJobj" text="Open jobj file" />
+               </items>
+            </Menu>
         </menus>
       </MenuBar>
       <ChoiceBox fx:id="choiceBox" layoutX="14.0" layoutY="400.0" prefWidth="150.0" value="Search Filters" />

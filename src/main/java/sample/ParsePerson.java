@@ -2,7 +2,6 @@ package sample;
 
 public class ParsePerson {
     public static Person parsePerson(String person) throws InvalidPersonFormat {
-        Person personX = new Person("test", "01", "01", "1920", "0000000", "test@test.com");
         try {
             String[] personData = person.split("; ", 5);
             if (personData.length == 5) {
@@ -14,31 +13,21 @@ public class ParsePerson {
                     String yearOfBirth = dateElements[2];
                     String phonenumber = personData[4];
                     String email = personData[3];
-
-                    personX.setName(name);
-                    personX.setDateOfBirth(dayOfBirth, monthOfBirth, yearOfBirth);
-                    personX.setAge(dayOfBirth, monthOfBirth, yearOfBirth);
-                    personX.setEmail(email);
-                    personX.setPhone(phonenumber);
-
-                    if (personX.getAge() != Integer.parseInt(personData[1])) {
-                        System.err.println("Age and date of birth do not match. Age has been replaced.");
-
-                        return personX;
-                    } else {
-                        throw new InvalidPersonFormat("Invalid date format.\nCheck for 'DD/MM/YYYY.");
+                    int age;
+                    try{
+                        age = Integer.parseInt(personData[1]);
+                    } catch (NumberFormatException e) {
+                        throw new NumberFormatException("Invalid age");
                     }
-                    return personX;
+                    return new Person(name, dayOfBirth, monthOfBirth, yearOfBirth, phonenumber, email);
                 } else {
                     throw new InvalidPersonFormat("Invalid person format.\nCheck for 'name;date_of_birth;email;phone' format.");
                 }
-                return personX;
             }
         } catch (InvalidPersonFormat e) {
             throw new InvalidPersonFormat("Invalid person format. Could not read or split string.");
-            personX = null;
         }
-        return personX;
+        return null;
     }
 
     public static String[] parseDate(String dateOfBirth) throws InvalidDate{

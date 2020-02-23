@@ -12,7 +12,11 @@ import javafx.stage.FileChooser;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
@@ -177,9 +181,10 @@ public class Controller implements Initializable {
         fc.setInitialDirectory(new File(currentDir));
 
         File selectedFile = fc.showOpenDialog(null);
+        String innPath = selectedFile.getPath();
 
         try {
-            ObservableList<Person> personList = Reader.readPeople(selectedFile.getPath());
+            ObservableList<Person> personList = Reader.readPeople(innPath);
             tableView.setItems(personList);
         } catch (IOException e) {
             System.err.println("Could not read the requested file. Cause: " + e.getMessage());
@@ -194,7 +199,7 @@ public class Controller implements Initializable {
 
         FileChooser fc = new FileChooser();
         String currentDir = Paths.get(".").toAbsolutePath().normalize().toString();
-        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT files", "*.txt"));
+        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT files", "*.txt"), new FileChooser.ExtensionFilter("JOBJ Files", "*.jobj"));
         fc.setInitialDirectory(new File(currentDir));
 
         File selectedFile = fc.showOpenDialog(null);
@@ -213,7 +218,7 @@ public class Controller implements Initializable {
 
         FileChooser fc = new FileChooser();
         String currentDir = Paths.get(".").toAbsolutePath().normalize().toString();
-        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT files", "*.txt"));
+        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT files", "*.txt"), new FileChooser.ExtensionFilter("JOBJ Files", "*.jobj"));
         fc.setInitialFileName("personer");
         fc.setInitialDirectory(new File(currentDir));
 
@@ -223,6 +228,26 @@ public class Controller implements Initializable {
             Writer.writeString(selectedFile, str);
         } catch (Exception e){
             System.err.println("Failed to read file.");
+        }
+    }
+
+    @FXML
+    void btnOpenFileJobj(ActionEvent event) {
+        FileChooser fc = new FileChooser();
+        String currentDir = Paths.get(".").toAbsolutePath().normalize().toString();
+        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("JOBJ Files", "*.jobj"));
+        fc.setInitialDirectory(new File(currentDir));
+
+        File selectedFile = fc.showOpenDialog(null);
+        String innPath = selectedFile.getPath();
+        Path filePath = Paths.get(innPath);
+
+        try (InputStream is = Files.newInputStream(filePath); ObjectInputStream ois = new ObjectInputStream(is)) {
+           personList = (ArrayList<Person>) ois.readObject();
+           ObservableList<Person> obspList = FXCollections.observableArrayList(personList);
+           tableView.setItems(obspList);
+        } catch (Exception e) {
+            System.err.println("Could not read the requested file. Cause: " + e.getMessage());
         }
     }
 
