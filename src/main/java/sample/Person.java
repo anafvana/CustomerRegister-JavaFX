@@ -40,7 +40,7 @@ public class Person implements Serializable {
         return age.get();
     }
 
-    public static void setAge(String dayOfBirth, String monthOfBirth, String yearOfBirth){
+    public void setAge(String dayOfBirth, String monthOfBirth, String yearOfBirth){
         age.set(NumberValidation.calcAge(dayOfBirth, monthOfBirth, yearOfBirth));
     }
 
