@@ -13,10 +13,16 @@ public class ParsePerson {
                     String monthOfBirth = newPerson.monthOfBirth;
                     String yearOfBirth = newPerson.yearOfBirth;
                     String dateOfBirth = NumberValidation.buildDate(dayOfBirth, monthOfBirth, yearOfBirth);
+                    int age = NumberValidation.calcAge(newPerson.dayOfBirth, newPerson.monthOfBirth, newPerson.yearOfBirth);
                     String phonenumber = newPerson.getPhone();
                     String email = newPerson.getEmail();
 
                     personData[0] = name;
+                    if (age == Integer.parseInt(personData[1])){
+                        age = Integer.parseInt(personData[1]);
+                    } else {
+                        throw new InvalidPersonFormat("Age and date of birth do not match.");
+                    }
                     personData[2] = dateOfBirth;
                     personData[3] = phonenumber;
                     personData[4] = email;
