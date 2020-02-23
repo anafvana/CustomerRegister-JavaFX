@@ -2,41 +2,43 @@ package sample;
 
 public class ParsePerson {
     public static Person parsePerson(String person) throws InvalidPersonFormat {
+        Person personX = new Person("test", "01", "01", "1920", "0000000", "test@test.com");
         try {
-            Person newPerson = new Person("test", "test", "test", "test", "test", "test");
             String[] personData = person.split("; ", 5);
             if (personData.length == 5) {
                 String[] dateElements = personData[2].split("/", 3);
                 if (dateElements.length == 3) {
-                    String name = newPerson.getName();
-                    String dayOfBirth = newPerson.dayOfBirth;
-                    String monthOfBirth = newPerson.monthOfBirth;
-                    String yearOfBirth = newPerson.yearOfBirth;
-                    String dateOfBirth = NumberValidation.buildDate(dayOfBirth, monthOfBirth, yearOfBirth);
-                    int age = NumberValidation.calcAge(newPerson.dayOfBirth, newPerson.monthOfBirth, newPerson.yearOfBirth);
-                    String phonenumber = newPerson.getPhone();
-                    String email = newPerson.getEmail();
+                    String name = personData[0];
+                    String dayOfBirth = dateElements[0];
+                    String monthOfBirth = dateElements[1];
+                    String yearOfBirth = dateElements[2];
+                    String phonenumber = personData[4];
+                    String email = personData[3];
 
-                    personData[0] = name;
-                    if (age == Integer.parseInt(personData[1])){
-                        age = Integer.parseInt(personData[1]);
+                    personX.setName(name);
+                    personX.setDateOfBirth(dayOfBirth, monthOfBirth, yearOfBirth);
+                    personX.setAge(dayOfBirth, monthOfBirth, yearOfBirth);
+                    personX.setEmail(email);
+                    personX.setPhone(phonenumber);
+
+                    if (personX.getAge() != Integer.parseInt(personData[1])) {
+                        System.err.println("Age and date of birth do not match. Age has been replaced.");
+
+                        return personX;
                     } else {
-                        throw new InvalidPersonFormat("Age and date of birth do not match.");
+                        throw new InvalidPersonFormat("Invalid date format.\nCheck for 'DD/MM/YYYY.");
                     }
-                    personData[2] = dateOfBirth;
-                    personData[3] = phonenumber;
-                    personData[4] = email;
-
-                    return newPerson;
+                    return personX;
                 } else {
-                    throw new InvalidPersonFormat("Invalid date format.\nCheck for 'DD/MM/YYYY.");
+                    throw new InvalidPersonFormat("Invalid person format.\nCheck for 'name;date_of_birth;email;phone' format.");
                 }
-            } else {
-                throw new InvalidPersonFormat("Invalid person format.\nCheck for 'name;date_of_birth;email;phone' format.");
+                return personX;
             }
         } catch (InvalidPersonFormat e) {
             throw new InvalidPersonFormat("Invalid person format. Could not read or split string.");
+            personX = null;
         }
+        return personX;
     }
 
     public static String[] parseDate(String dateOfBirth) throws InvalidDate{

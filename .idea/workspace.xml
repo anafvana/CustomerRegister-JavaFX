@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9a9c85a-eaea-453d-a10d-46cf4c5b27eb" name="Default Changelist" comment="" />
+    <list default="true" id="b9a9c85a-eaea-453d-a10d-46cf4c5b27eb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/ParsePerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/ParsePerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Person.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +65,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\oyvin\Downloads\JavaFXML-Maven\JavaFXML-Maven voorbeeld NIET GEBRUIKEN!\src\test\java" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

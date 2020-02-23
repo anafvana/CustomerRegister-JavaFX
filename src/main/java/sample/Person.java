@@ -23,7 +23,7 @@ public class Person implements Serializable {
         this.email = new SimpleStringProperty(TextValidation.buildEmail(email));
         this.phone = new SimpleStringProperty(TextValidation.buildPhone(phone));
 
-        if(this.name.getValue().isEmpty() || age.getValue() == 0 || this.dateOfBirth.getValue().isEmpty() || this.phone.getValue().isEmpty() || this.email.getValue().isEmpty()){
+        if(this.name.getValue().isEmpty() || age.getValue() == null || this.dateOfBirth.getValue().isEmpty() || this.phone.getValue().isEmpty() || this.email.getValue().isEmpty()){
             throw new IllegalArgumentException();
         }
     }
