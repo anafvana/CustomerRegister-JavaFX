@@ -6,7 +6,7 @@ public class FormatPerson {
     public static String DELIMITER = ";";
 
     public static String formatPerson(Person p){
-        return p.getName() + DELIMITER + p.getDateOfBirth() + DELIMITER + p.getEmail() + DELIMITER + p.getPhone();
+        return p.getName() + DELIMITER + p.getAge() + DELIMITER + p.getDateOfBirth() + DELIMITER + p.getEmail() + DELIMITER + p.getPhone();
     }
 
     public static String formatPeople(List<Person> peopleList){
