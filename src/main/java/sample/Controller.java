@@ -10,10 +10,7 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.FileChooser;
 
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -194,25 +191,7 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    void btnSaveToExisting(ActionEvent event) {
-        String str = FormatPerson.formatPeople(tableView.getItems());
-
-        FileChooser fc = new FileChooser();
-        String currentDir = Paths.get(".").toAbsolutePath().normalize().toString();
-        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT files", "*.txt"));
-        fc.setInitialDirectory(new File(currentDir));
-
-        File selectedFile = fc.showOpenDialog(null);
-
-        try {
-            Writer.writeString(selectedFile, str);
-        } catch (IOException e){
-            System.err.print("Failed to write on this file.");
-        }
-    }
-
-    @FXML
-    private void btnSaveToNew(ActionEvent event) {
+    private void btnSave(ActionEvent event) {
 
         String str = FormatPerson.formatPeople(tableView.getItems());
 
@@ -233,29 +212,27 @@ public class Controller implements Initializable {
 
     @FXML
     void btnOpenFileJobj(ActionEvent event) {
-        FileChooser fc = new FileChooser();
-        String currentDir = Paths.get(".").toAbsolutePath().normalize().toString();
-        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("JOBJ Files", "*.jobj"));
-        fc.setInitialDirectory(new File(currentDir));
 
-        File selectedFile = fc.showOpenDialog(null);
-        String innPath = selectedFile.getPath();
-        Path filePath = Paths.get(innPath);
-
-        try (InputStream is = Files.newInputStream(filePath); ObjectInputStream ois = new ObjectInputStream(is)) {
-           personList = (ArrayList<Person>) ois.readObject();
-           ObservableList<Person> obspList = FXCollections.observableArrayList(personList);
-           tableView.setItems(obspList);
-        } catch (Exception e) {
-            System.err.println("Could not read the requested file. Cause: " + e.getMessage());
-        }
     }
 
     @FXML
-    private void btnSaveFileToExistingJobj(ActionEvent event){
-        Path path = Paths.get("personer.jobj");
-        try{
-            Fil
+    void btnSaveToJobj(ActionEvent event) {
+        String str = FormatPerson.formatPeople(tableView.getItems());
+
+        FileChooser fc = new FileChooser();
+        String currentDir = Paths.get(".").toAbsolutePath().normalize().toString();
+        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("JOBJ files", "*.jobj"));
+        fc.setInitialFileName("personer");
+        fc.setInitialDirectory(new File(currentDir));
+
+        File selectedFile = fc.showSaveDialog(null);
+        String innPath = selectedFile.getPath();
+        Path filePath = Paths.get(innPath);
+
+        try (OutputStream os = Files.newOutputStream(filePath);ObjectOutputStream out = new ObjectOutputStream(os)){
+            out.writeObject(str);
+        } catch (Exception e){
+            System.err.println(e.getMessage());
         }
     }
 

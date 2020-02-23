@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9a9c85a-eaea-453d-a10d-46cf4c5b27eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/WriterJobj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personer.jobj" beforeDir="false" afterPath="$PROJECT_DIR$/personer.jobj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/ParsePerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/ParsePerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/ParsePerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/ParsePerson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/sample.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-cli/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-cli/createdFiles.lst" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +75,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\oyvin\Downloads\JavaFXML-Maven\JavaFXML-Maven voorbeeld NIET GEBRUIKEN!\src\test\java" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -194,6 +206,7 @@
       <workItem from="1582461320835" duration="546000" />
       <workItem from="1582462084032" duration="7804000" />
       <workItem from="1582474314282" duration="2612000" />
+      <workItem from="1582477626511" duration="2639000" />
     </task>
     <task id="LOCAL-00001" summary="Turned into Observable list;&#10;Added the override methods for reader (might delete)">
       <created>1582462876110</created>

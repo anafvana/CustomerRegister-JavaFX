@@ -69,8 +69,8 @@
         <menus>
           <Menu mnemonicParsing="false" text="Save">
             <items>
-                  <MenuItem mnemonicParsing="false" onAction="#btnSaveToNew" text="Save to new file" />
-              <MenuItem mnemonicParsing="false" onAction="#btnSaveToExisting" text="Save to existing file" />
+                  <MenuItem mnemonicParsing="false" onAction="#btnSave" text="Save to new TXT file" />
+                  <MenuItem mnemonicParsing="false" onAction="#btnSaveToJobj" text="Save to new JOBJ file" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Open">
