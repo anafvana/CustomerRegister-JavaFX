@@ -185,17 +185,13 @@ public class Controller implements Initializable {
         fc.setInitialDirectory(new File(currentDir));
 
         File selectedFile = fc.showOpenDialog(null);
-        ObservableList<Person> newList = FXCollections.observableArrayList();
-        /*try {
-            newList = Importer.readPerson(personList, selectedFile.getPath());
+        ObservableList<Person> newList;
+        try {
+            newList = Importer.readPerson(selectedFile.getPath());
             tableView.setItems(newList);
-        } catch (IOException e){
-            ErrorDialogs.showErrorDialog(e.getMessage());
-        } catch (InvalidPersonFormat e){
+        } catch (IOException | InvalidPersonFormat e){
             ErrorDialogs.showErrorDialog(e.getMessage());
         }
-
-         */
     }
 
     @FXML
