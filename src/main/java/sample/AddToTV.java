@@ -23,10 +23,6 @@ public class AddToTV implements Serializable {
         list.add(obj);
     }
 
-    public void deleteElement(){
-        list.clear();
-    }
-
     public ObservableList<Person> nameFilter(String name){
         if(!name.isEmpty()) {
             return list.stream().filter

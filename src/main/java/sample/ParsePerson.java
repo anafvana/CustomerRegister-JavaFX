@@ -13,12 +13,7 @@ public class ParsePerson {
                     String yearOfBirth = dateElements[2];
                     String phonenumber = personData[4];
                     String email = personData[3];
-                    int age;
-                    try{
-                        age = Integer.parseInt(personData[1]);
-                    } catch (NumberFormatException e) {
-                        throw new NumberFormatException("Invalid age");
-                    }
+
                     return new Person(name, dayOfBirth, monthOfBirth, yearOfBirth, phonenumber, email);
                 } else {
                     throw new InvalidPersonFormat("Invalid person format.\nCheck for 'name;date_of_birth;email;phone' format.");
@@ -34,9 +29,6 @@ public class ParsePerson {
         try {
             String[] splitDateArray = dateOfBirth.split("/", 3);
             if (splitDateArray.length == 3) {
-                String dayOfBirth = splitDateArray[0];
-                String monthOfBirth = splitDateArray[1];
-                String yearOfBirth = splitDateArray[2];
                 return splitDateArray;
             } else {
                 throw new InvalidDate("Invalid date format.\nCheck for DD/MM/YYYY.");

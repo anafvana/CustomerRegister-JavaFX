@@ -2,7 +2,7 @@ package sample;
 
 public class TextValidation {
     public static String testName(String name){
-        String inName = "test";
+        String inName;
         if (name.matches("[A-ZÆØÅ][a-zæøå]+") || name.matches("[A-ZÆØÅ][a-zæøå]+ [A-ZÆØÅ][a-zæøå]*.?")
                 || name.matches("[A-ZÆØÅ][a-zæøå]+ [A-ZÆØÅ][a-zæøå]*.? [A-ZÆØÅ][a-zæøå]*.?")){
             inName = name;
@@ -27,7 +27,7 @@ public class TextValidation {
     }
 
     public static String buildEmail(String email){
-        String inEmail = "test";
+        String inEmail;
         if ((email.matches("[-_\\w.]+[@][-_\\w]+[.][a-z0-9]{1,3}")) || (email.matches("[-_\\w.]+[@][\\w]+[.][a-z0-9]{1,3}[.][a-z0-9]{1,3}")) ){
             inEmail = email;
             return inEmail;
@@ -51,7 +51,7 @@ public class TextValidation {
     }
 
     public static String buildPhone (String phone){
-        String phoneNr = "test";
+        String phoneNr;
 
         if ((phone.matches("[+]?\\d{7,9}")) || phone.matches("[+]?[\\d+[-. ]\\d]{7,16}") ||
                 (phone.matches("[(][0-9+]{1,5}[)]\\s?\\d{9,13}")) || phone.matches("[(][0-9+]{1,5}[)]\\s?[\\d+[-. ]\\d]{7,20}")

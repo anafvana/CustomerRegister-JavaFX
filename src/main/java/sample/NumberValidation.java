@@ -108,8 +108,8 @@ class NumberValidation {
 
             date = String.format("%02d", day) + "/" + String.format("%02d", month) + "/" + year;
         } catch (InvalidDate e) {
-            String error = "Invalid date.";
             date = "";
+            System.err.println("Invalid date.");
         }
         return date;
     }
@@ -124,8 +124,7 @@ class NumberValidation {
 
     private static String[] dateArray(){
         String fullDate = getDate();
-        String[] dateArray = new String[3];
-        dateArray = fullDate.split("-", 3);
+        String[] dateArray = fullDate.split("-", 3);
         return dateArray;
     }
 
@@ -170,7 +169,7 @@ class NumberValidation {
             }
 
         } catch (InvalidDate e) {
-            String error = "Invalid date.";
+            System.err.println("Invalid date.");
         }
 
         return age;

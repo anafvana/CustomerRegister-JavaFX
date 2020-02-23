@@ -24,7 +24,6 @@ public class Controller implements Initializable {
     String EmailError;
     String phoneError;
     String errors = "";
-    ArrayList<Person> personList = new ArrayList<>();
 
     @FXML
     private TextField txtName;
@@ -49,9 +48,6 @@ public class Controller implements Initializable {
 
     @FXML
     private TableView<Person> tableView;
-
-    @FXML
-    private TableColumn<Person, Integer> intDataColumn;
 
     @FXML
     private TableColumn<Person, String> txtNameColumn;
@@ -157,7 +153,6 @@ public class Controller implements Initializable {
         } catch (InvalidDate e){
             System.err.println(e.getMessage());
         }
-
     }
 
     @FXML
@@ -231,24 +226,30 @@ public class Controller implements Initializable {
         }
     }
 
+
+    ObservableList<Person> newPersonList = FXCollections.observableArrayList();
     @FXML
     void btnSaveToJobj(ActionEvent event) {
-        String str = FormatPerson.formatPeople(tableView.getItems());
+        try{
+            newPersonList.addAll(tableView.getItems());
 
-        FileChooser fc = new FileChooser();
-        String currentDir = Paths.get(".").toAbsolutePath().normalize().toString();
-        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("JOBJ files", "*.jobj"));
-        fc.setInitialFileName("personer");
-        fc.setInitialDirectory(new File(currentDir));
+            FileChooser fc = new FileChooser();
+            String currentDir = Paths.get(".").toAbsolutePath().normalize().toString();
+            fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("JOBJ files", "*.jobj"));
+            fc.setInitialFileName("personer");
+            fc.setInitialDirectory(new File(currentDir));
 
-        File selectedFile = fc.showSaveDialog(null);
-        String innPath = selectedFile.getPath();
-        Path filePath = Paths.get(innPath);
+            File selectedFile = fc.showSaveDialog(null);
+            Path path = Paths.get(selectedFile.getPath());
 
-        try (OutputStream os = Files.newOutputStream(filePath);ObjectOutputStream out = new ObjectOutputStream(os)){
-            out.writeObject(str);
-        } catch (Exception e){
-            System.err.println(e.getMessage());
+            try (OutputStream os = Files.newOutputStream(path);
+                 ObjectOutputStream out = new ObjectOutputStream(os))
+            {
+                WriterJobj.jobjSaveFile(path, newPersonList);
+            }
+
+        } catch (IOException e){
+            System.err.println("Could not save to file. Cause: " + e.getMessage());
         }
     }
 
