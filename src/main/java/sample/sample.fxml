@@ -43,7 +43,7 @@
                   <PropertyValueFactory property="Name" />
               </cellValueFactory>
           </TableColumn>
-            <TableColumn fx:id="intDataColumn" onEditCommit="#intDataEdited" prefWidth="74.4000244140625" text="Age">
+            <TableColumn fx:id="intDataColumn" prefWidth="74.4000244140625" text="Age">
                 <cellValueFactory>
                     <PropertyValueFactory property="Age" />
                 </cellValueFactory>
