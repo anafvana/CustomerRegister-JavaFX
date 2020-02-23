@@ -253,7 +253,10 @@ public class Controller implements Initializable {
 
     @FXML
     private void btnSaveFileToExistingJobj(ActionEvent event){
-        Path path = Paths.
+        Path path = Paths.get("personer.jobj");
+        try{
+            Fil
+        }
     }
 
     ObservableList<String> chkBoxList = FXCollections.observableArrayList();
