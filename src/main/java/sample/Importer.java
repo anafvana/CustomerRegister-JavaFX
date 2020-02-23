@@ -1,5 +1,9 @@
 package sample;
 
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -9,15 +13,15 @@ import java.util.List;
 
 public class Importer {
 
-    static List<Person> readPerson(ArrayList<Person> personList, String path) throws IOException, InvalidPersonFormat{
-
+    static ObservableList<Person> readPeople(ArrayList<Person> personList, String path) throws IOException, InvalidPersonFormat{
+        ObservableList<Person> obsListPersons = FXCollections.observableArrayList(personList);
         try (BufferedReader reader = Files.newBufferedReader(Paths.get(path))) {
             String line;
 
             while ((line = reader.readLine()) != null){
-                personList.add(ParsePerson.parsePerson(line));
+                obsListPersons.add(ParsePerson.parsePerson(line));
             }
         }
-        return personList;
+        return obsListPersons;
     }
 }
