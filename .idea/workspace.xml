@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9a9c85a-eaea-453d-a10d-46cf4c5b27eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/ErrorDialogs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Importer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sample/sample.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-cli/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-cli/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-cli/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-cli/inputFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="b9a9c85a-eaea-453d-a10d-46cf4c5b27eb" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -237,7 +222,13 @@
       <option name="project" value="LOCAL" />
       <updated>1582467603067</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="Fixed stuffs">
+      <created>1582472070180</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1582472070180</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +254,8 @@
     <MESSAGE value="There was an attempt (at making the reader work)&#10;Changed Importer class to Reader class&#10;Added creation of ObservableList in Reader&#10;Added some code to Controller to try to make the document opening to work" />
     <MESSAGE value="Changed setAge()" />
     <MESSAGE value="Removed parameter Person" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed parameter Person" />
+    <MESSAGE value="Fixed stuffs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed stuffs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="8" key="#JavaFX11-example_[exec:java]" timestamp="1580398480222">
@@ -294,30 +286,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1582190576567" />
-    <state x="379" y="7" key="CommitChangelistDialog2" timestamp="1582467841327">
+    <state x="379" y="7" key="CommitChangelistDialog2" timestamp="1582472068735">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="379" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582467841327" />
+    <state x="379" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582472068735" />
     <state x="549" y="140" key="FileChooserDialogImpl" timestamp="1582392845475">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="140" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582392845475" />
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1582472048402">
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1582472086344">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582472048402" />
-    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1582472048402">
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582472086344" />
+    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1582472086344">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582472048402" />
-    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1582472048402">
+    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582472086344" />
+    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1582472086344">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582472048402" />
-    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1582472048402">
+    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582472086344" />
+    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1582472086344">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582472048402" />
+    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582472086344" />
     <state x="513" y="123" key="RollbackChangesDialog" timestamp="1582471736485">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
