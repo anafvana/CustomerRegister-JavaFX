@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9a9c85a-eaea-453d-a10d-46cf4c5b27eb" name="Default Changelist" comment="">
+    <list default="true" id="b9a9c85a-eaea-453d-a10d-46cf4c5b27eb" name="Default Changelist" comment="Added age + testing methods to ParsePerson">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Importer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Reader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/ParsePerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/ParsePerson.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,9 +74,9 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
-      <module name="JavaFX11-example" />
+      <module name="Oblig 1 - Programutvikling" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sample.*" />
@@ -87,7 +89,7 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
-      <module name="Oblig 1 - Programutvikling" />
+      <module name="JavaFX11-example" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sample.*" />
@@ -188,7 +190,7 @@
       <workItem from="1582390666545" duration="7020000" />
       <workItem from="1582457199621" duration="2437000" />
       <workItem from="1582461320835" duration="546000" />
-      <workItem from="1582462084032" duration="1755000" />
+      <workItem from="1582462084032" duration="2499000" />
     </task>
     <task id="LOCAL-00001" summary="Turned into Observable list;&#10;Added the override methods for reader (might delete)">
       <created>1582462876110</created>
@@ -204,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582463369805</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added age + testing methods to ParsePerson">
+      <created>1582463864215</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582463864215</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +233,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Turned into Observable list;&#10;Added the override methods for reader (might delete)" />
     <MESSAGE value="Added p.getAge() to FormatPerson" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added p.getAge() to FormatPerson" />
+    <MESSAGE value="Added age + testing methods to ParsePerson" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added age + testing methods to ParsePerson" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="8" key="#JavaFX11-example_[exec:java]" timestamp="1580398480222">

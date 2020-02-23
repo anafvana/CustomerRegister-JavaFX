@@ -23,23 +23,5 @@ public class Main extends Application {
     public static void main(String[] args){
         launch(args);
 
-        Reader reader = new Reader() {
-            @Override
-            public int read(char[] chars, int i, int i1) throws IOException {
-                return 0;
-            }
-
-            @Override
-            public void close() throws IOException {
-
-            }
-        };
-
-        try {
-
-        } catch (InvalidPersonFormat e){
-
-        }
-
     }
 }

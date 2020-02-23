@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,7 +13,6 @@ import javafx.stage.FileChooser;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.Reader;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.util.*;
@@ -185,31 +185,29 @@ public class Controller implements Initializable {
         fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT files", "*.txt"));
         fc.setInitialDirectory(new File(currentDir));
 
-        Reader r = new Reader() {
-            @Override
-            public int read(char[] chars, int i, int i1) throws IOException {
-                return 0;
+        Reader reader = new Reader();
+            try {
+                ObservableList<Person> personList = reader.readPeople(currentDir);
+            } catch (IOException e) {
+                System.err.println("Could not read the requested file. Cause: " + e.getMessage());
+            } catch (InvalidPersonFormat e) {
+                System.err.println("The data is not formatted correctly. Cause: " + e.getMessage());
             }
+    };
 
-            @Override
-            public void close() throws IOException {
-
-            }
-
-            /*try {
-
-            }*/
-        };
-
-        File selectedFile = fc.showOpenDialog(null);
-        ObservableList<Person> newList;
-        try {
-            newList = Importer.readPerson(selectedFile.getPath());
+        /*File selectedFile = fc.showOpenDialog(null);
+        ObservableList<Person> newList = FXCollections.observableArrayList();
+        /*try {
+            newList = Importer.readPerson(personList, selectedFile.getPath());
             tableView.setItems(newList);
-        } catch (IOException | InvalidPersonFormat e){
+        } catch (IOException e){
+            ErrorDialogs.showErrorDialog(e.getMessage());
+        } catch (InvalidPersonFormat e){
             ErrorDialogs.showErrorDialog(e.getMessage());
         }
-    }
+
+
+    }*/
 
     @FXML
     void btnSaveToExisting(ActionEvent event) {
