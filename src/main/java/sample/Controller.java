@@ -212,7 +212,23 @@ public class Controller implements Initializable {
 
     @FXML
     void btnOpenFileJobj(ActionEvent event) {
+        FileChooser fc = new FileChooser();
+        String currentDir = Paths.get(".").toAbsolutePath().normalize().toString();
+        fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("JOBJ Files", "*.jobj"));
+        fc.setInitialDirectory(new File(currentDir));
 
+        File selectedFile = fc.showOpenDialog(null);
+        String innPath = selectedFile.getPath();
+        Path filePath = Paths.get(innPath);
+
+        try (InputStream is = Files.newInputStream(filePath); ObjectInputStream ois = new ObjectInputStream(is)) {
+            Person jobjPerson = (Person) ois.readObject();
+            ObservableList<Person> plist = newPerson.getTableView();
+            plist.add(jobjPerson);
+            tableView.setItems(plist);
+        } catch (Exception e) {
+            System.err.println("Could not read the requested file. Cause: " + e.getMessage());
+        }
     }
 
     @FXML
