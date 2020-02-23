@@ -76,7 +76,7 @@
           </Menu>
         </menus>
       </MenuBar>
-      <ChoiceBox fx:id="choiceBox" layoutX="14.0" layoutY="400.0" prefWidth="150.0" />
+      <ChoiceBox value="Search Filters" fx:id="choiceBox" layoutX="14.0" layoutY="400.0" prefWidth="150.0" />
       <TextField fx:id="filterText" layoutX="14.0" layoutY="440.0" />
       <Label fx:id="lblFilter" layoutX="14.0" layoutY="559.0" prefHeight="27.0" prefWidth="150.0" />
       <Button layoutX="14.0" layoutY="480.0" mnemonicParsing="false" onAction="#filterTbl" prefHeight="26.0" prefWidth="149.0" text="Filter" />

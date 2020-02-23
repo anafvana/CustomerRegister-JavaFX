@@ -186,7 +186,7 @@ public class Controller implements Initializable {
 
         File selectedFile = fc.showOpenDialog(null);
         ObservableList<Person> newList = FXCollections.observableArrayList();
-        try {
+        /*try {
             newList = Importer.readPerson(personList, selectedFile.getPath());
             tableView.setItems(newList);
         } catch (IOException e){
@@ -194,6 +194,8 @@ public class Controller implements Initializable {
         } catch (InvalidPersonFormat e){
             ErrorDialogs.showErrorDialog(e.getMessage());
         }
+
+         */
     }
 
     @FXML
@@ -238,11 +240,14 @@ public class Controller implements Initializable {
 
     private void addChkBoxItems(){
         chkBoxList.removeAll();
+        String chkBoxFilter = "Search Filters";
         String chkBoxName = "Name";
+        String chkBoxAge = "Age";
+        String chkBoxDob = "Date of birth";
         String chkBoxPnr = "Phonenumber";
         String chkBoxEmail = "Email";
 
-        chkBoxList.addAll(chkBoxName, chkBoxPnr, chkBoxEmail);
+        chkBoxList.addAll(chkBoxFilter, chkBoxName, chkBoxAge, chkBoxDob, chkBoxPnr, chkBoxEmail);
         choiceBox.getItems().addAll(chkBoxList);
     }
 
@@ -267,22 +272,48 @@ public class Controller implements Initializable {
                 filteredList = newPerson.nameFilter(newFilterText);
                 tableView.setItems(filteredList);
                 lblFilter.setText("Registry filtered by name.");
+                if(filteredList.isEmpty()){
+                    lblFilter.setText("No person was found.");
+                }
+            }
+            if(filterType.equals("Age")){
+                filteredList = newPerson.ageFilter(newFilterText);
+                tableView.setItems(filteredList);
+                lblFilter.setText("Registry filtered by age.");
+                if(filteredList.isEmpty()){
+                    lblFilter.setText("No person was found.");
+                }
+            }
+            if(filterType.equals("Date of birth")){
+                filteredList = newPerson.dateOfBirthFilter(newFilterText);
+                tableView.setItems(filteredList);
+                lblFilter.setText("Registry filtered by date of birth.");
+                if(filteredList.isEmpty()){
+                    lblFilter.setText("No person was found.");
+                }
             }
             if (filterType.equals("Phonenumber")) {
                 filteredList = newPerson.phoneFilter(newFilterText);
                 tableView.setItems(filteredList);
                 lblFilter.setText("Registry filtered by phone.");
+                if(filteredList.isEmpty()){
+                    lblFilter.setText("No person was found.");
+                }
             }
             if (filterType.equals("Email")) {
                 filteredList = newPerson.emailFilter(newFilterText);
                 tableView.setItems(filteredList);
                 lblFilter.setText("Registry filtered by email.");
+                if(filteredList.isEmpty()){
+                    lblFilter.setText("No person was found.");
+                }
             }
         }
     }
 
     @FXML
     private void resetFilterBtn(ActionEvent event){
+        filterText.setText("");
         lblFilter.setText("");
         lblErrors.setText("");
         tableView.setItems(newPerson.getTableView());

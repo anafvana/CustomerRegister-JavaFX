@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9a9c85a-eaea-453d-a10d-46cf4c5b27eb" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="b9a9c85a-eaea-453d-a10d-46cf4c5b27eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaFX11-example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaFX11-example.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Oblig 1 - Programutvikling.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Oblig 1 - Programutvikling.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/AddToTV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/AddToTV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/sample.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +24,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -31,6 +43,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -52,19 +65,7 @@
       <recent name="C:\Users\oyvin\Downloads\JavaFXML-Maven\JavaFXML-Maven voorbeeld NIET GEBRUIKEN!\src\test\java" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="JUnit.ParsePersonTest.validPerson">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
       <module name="JavaFX11-example" />
@@ -149,9 +150,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ParsePersonTest.validPerson" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PersonTest.testValidName" />
         <item itemvalue="JUnit.PersonTest.testInvalidName" />
       </list>
@@ -180,6 +181,7 @@
       <workItem from="1582380475439" duration="2404000" />
       <workItem from="1582390666545" duration="7020000" />
       <workItem from="1582457199621" duration="2437000" />
+      <workItem from="1582461320835" duration="281000" />
     </task>
     <servers />
   </component>
@@ -219,22 +221,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="140" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582392845475" />
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1582455982020">
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1582461605503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582455982020" />
-    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1582455982020">
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582461605503" />
+    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1582461605502">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582455982020" />
-    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1582455982020">
+    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582461605502" />
+    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1582461605502">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582455982020" />
-    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1582455982020">
+    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582461605502" />
+    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1582461605502">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582455982020" />
+    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582461605502" />
     <state x="420" y="83" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1582190323520">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

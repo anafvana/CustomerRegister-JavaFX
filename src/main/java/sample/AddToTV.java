@@ -37,6 +37,24 @@ public class AddToTV implements Serializable {
         }
     }
 
+    public ObservableList<Person> ageFilter(String age){
+        if(!age.isEmpty()){
+            int intAge = Integer.parseInt(age);
+            return list.stream().filter
+                    (person -> person.getAge() == intAge).collect(Collectors.toCollection(FXCollections::observableArrayList));
+        } else {
+            return list;
+        }
+    }
+
+    public ObservableList<Person> dateOfBirthFilter(String dateOfBirth){
+        if(!dateOfBirth.isEmpty()){
+            return list.stream().filter
+                    (person -> person.getDateOfBirth().contains(dateOfBirth.toUpperCase())).collect(Collectors.toCollection(FXCollections::observableArrayList));
+        }
+        return list;
+    }
+
     public ObservableList<Person> emailFilter(String email){
         if(!email.isEmpty()) {
             return list.stream().filter
