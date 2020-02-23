@@ -79,7 +79,6 @@ public class Controller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         addChkBoxItems();
         newPerson.attachTableView(tableView);
-        intDataColumn.setCellFactory(TextFieldTableCell.forTableColumn(intStrConverter));
         txtNameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         txtDobColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         txtEmailColumn.setCellFactory(TextFieldTableCell.forTableColumn());
@@ -164,7 +163,7 @@ public class Controller implements Initializable {
         personStringCellEditEvent.getRowValue().setEmail(personStringCellEditEvent.getNewValue());
     }
 
-    @FXML
+    /*@FXML
     private void intDataEdited(TableColumn.CellEditEvent<Person, Integer> integerCellEditEvent){
         if(intStrConverter.wasSuccessful()) {
             try {
@@ -174,6 +173,8 @@ public class Controller implements Initializable {
             }
         }
     }
+
+     */
 
 
 
@@ -192,7 +193,7 @@ public class Controller implements Initializable {
             } catch (InvalidPersonFormat e) {
                 System.err.println("The data is not formatted correctly. Cause: " + e.getMessage());
             }
-    };
+    }
 
         /*File selectedFile = fc.showOpenDialog(null);
         ObservableList<Person> newList = FXCollections.observableArrayList();
