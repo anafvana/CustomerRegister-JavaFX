@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -169,7 +168,7 @@ public class Controller implements Initializable {
     private void intDataEdited(TableColumn.CellEditEvent<Person, Integer> integerCellEditEvent){
         if(intStrConverter.wasSuccessful()) {
             try {
-                integerCellEditEvent.getRowValue().setAge(integerCellEditEvent.getNewValue());
+                integerCellEditEvent.getRowValue().setAgeThroughTV(integerCellEditEvent.getNewValue());
             } catch (NumberFormatException e) {
                 throw new NumberFormatException("You have to enter a number");
             }
@@ -185,9 +184,9 @@ public class Controller implements Initializable {
         fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT files", "*.txt"));
         fc.setInitialDirectory(new File(currentDir));
 
-        Reader reader = new Reader();
             try {
-                ObservableList<Person> personList = reader.readPeople(currentDir);
+                ObservableList<Person> personList = Reader.readPeople(currentDir);
+                tableView.setItems(personList);
             } catch (IOException e) {
                 System.err.println("Could not read the requested file. Cause: " + e.getMessage());
             } catch (InvalidPersonFormat e) {

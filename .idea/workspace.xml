@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9a9c85a-eaea-453d-a10d-46cf4c5b27eb" name="Default Changelist" comment="Added age + testing methods to ParsePerson">
+    <list default="true" id="b9a9c85a-eaea-453d-a10d-46cf4c5b27eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personer.txt" beforeDir="false" afterPath="$PROJECT_DIR$/personer.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Importer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/NumberValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/NumberValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/Person.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +191,7 @@
       <workItem from="1582390666545" duration="7020000" />
       <workItem from="1582457199621" duration="2437000" />
       <workItem from="1582461320835" duration="546000" />
-      <workItem from="1582462084032" duration="2499000" />
+      <workItem from="1582462084032" duration="5489000" />
     </task>
     <task id="LOCAL-00001" summary="Turned into Observable list;&#10;Added the override methods for reader (might delete)">
       <created>1582462876110</created>
@@ -213,7 +214,21 @@
       <option name="project" value="LOCAL" />
       <updated>1582463864215</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="There was an attempt (at making the reader work)&#10;Changed Importer class to Reader class&#10;Added creation of ObservableList in Reader&#10;Added some code to Controller to try to make the document opening to work">
+      <created>1582464695468</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582464695468</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changed setAge()">
+      <created>1582465886694</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582465886694</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +249,9 @@
     <MESSAGE value="Turned into Observable list;&#10;Added the override methods for reader (might delete)" />
     <MESSAGE value="Added p.getAge() to FormatPerson" />
     <MESSAGE value="Added age + testing methods to ParsePerson" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added age + testing methods to ParsePerson" />
+    <MESSAGE value="There was an attempt (at making the reader work)&#10;Changed Importer class to Reader class&#10;Added creation of ObservableList in Reader&#10;Added some code to Controller to try to make the document opening to work" />
+    <MESSAGE value="Changed setAge()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed setAge()" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="8" key="#JavaFX11-example_[exec:java]" timestamp="1580398480222">
