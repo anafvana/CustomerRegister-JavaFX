@@ -6,6 +6,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.io.Reader;
+
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -19,6 +22,18 @@ public class Main extends Application {
 
     public static void main(String[] args){
         launch(args);
+
+        Reader reader = new Reader() {
+            @Override
+            public int read(char[] chars, int i, int i1) throws IOException {
+                return 0;
+            }
+
+            @Override
+            public void close() throws IOException {
+
+            }
+        };
 
     }
 }

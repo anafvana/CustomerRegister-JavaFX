@@ -12,6 +12,7 @@ import javafx.stage.FileChooser;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.Reader;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.util.*;
@@ -183,6 +184,22 @@ public class Controller implements Initializable {
         String currentDir = Paths.get(".").toAbsolutePath().normalize().toString();
         fc.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT files", "*.txt"));
         fc.setInitialDirectory(new File(currentDir));
+
+        Reader r = new Reader() {
+            @Override
+            public int read(char[] chars, int i, int i1) throws IOException {
+                return 0;
+            }
+
+            @Override
+            public void close() throws IOException {
+
+            }
+
+            /*try {
+
+            }*/
+        };
 
         File selectedFile = fc.showOpenDialog(null);
         ObservableList<Person> newList;
