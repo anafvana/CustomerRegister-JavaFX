@@ -1,4 +1,4 @@
-# DATA1600---Oblig1
+# DATA1600-Oblig1
 Obligatory assignment 1 for DATA1600 - Programutvikling. 
 
 ## Instruksjoner
